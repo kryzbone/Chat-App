@@ -22,7 +22,7 @@ function Chat({ location }) {
           [randomChat, setRandomChat] = useState([]),
           [randomData, setRandomData] = useState({})
     
-    const server = 'http://localhost:5000/';
+    const server = 'https://chat-app-react.glitch.me/';
     
    
     useEffect(() => {
@@ -93,12 +93,7 @@ function Chat({ location }) {
 
     },[chatRoom])
 
-    //dummy useEffect for development (remember to DELETE)
-    useEffect(()=> {
-        console.log( randomData)
-    },[randomData])
-
-
+    
     //Generate Random User
     function handleChat() {
         chatRoom === 'General'? setChatRoom('Random') : setChatRoom('General');
@@ -142,7 +137,7 @@ function Chat({ location }) {
     function typing() {
         const gen = 'gen', ran = 'ran';
         chatRoom === 'General'? socket.emit('typin', { msg:`${name} typing....`, cat: gen}) : socket.emit('typin', {msg:'typing...', id: randomData.id, cat:ran});
-        console.log('typing');
+        
     }
 
 
