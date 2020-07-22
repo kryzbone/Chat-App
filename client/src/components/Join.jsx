@@ -5,9 +5,6 @@ export default function Join() {
     const [name, setName] = useState('');
     const [bio, setBio] = useState('')
 
-    console.log(name)
-
-
     return (
         <div className="join-container">
             <div className="join-box">
