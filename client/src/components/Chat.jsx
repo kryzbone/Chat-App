@@ -160,7 +160,7 @@ function Chat({ location }) {
                     </ScrollToBottom>
     
                     <form className="chat-form" onSubmit={(e) => sendMsg(e)} >
-                        <input type="text"  placeholder="Send Message..." autoFocus onChange={typing} />
+                        <input type="text" key="gen"  placeholder="Send Message..." autoFocus onChange={typing} />
                         <button type="submit" >Send</button>
                     </form>
                 </div>
@@ -193,7 +193,7 @@ function Chat({ location }) {
                     </ScrollToBottom>
     
                     <form className="chat-form" onSubmit={(e) => sendMsg(e)} >
-                        <input type="text"  placeholder="Send Message..." autoFocus onChange={typing} />
+                        <input type="text" key="ran" placeholder="Send Message..." autoFocus onChange={typing} />
                         <button type="submit" >Send</button>
                     </form>
                 </div>
